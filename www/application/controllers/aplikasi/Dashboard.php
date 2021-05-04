@@ -15,7 +15,9 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        $this->load->view('aplikasi/dashboard/index');
+        $data['countPendapatan'] = $this->dashboard_m->CountPendapatanToday();
+        $data['countPenjualan'] = $this->dashboard_m->countPenjualanToday();
+        $this->load->view('aplikasi/dashboard/index', $data);
     }
 }
     

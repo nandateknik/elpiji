@@ -7,7 +7,7 @@ $this->load->view('template/navbar');
     <div class="row">
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
-                <div class="card-body">Primary Card</div>
+                <div class="card-body">Pendapatan Hari Ini :<br>Rp. <?= number_format($countPendapatan->total) ?></div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
                     <a class="small text-white stretched-link" href="#">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -16,7 +16,7 @@ $this->load->view('template/navbar');
         </div>
         <div class="col-xl-3 col-md-6">
             <div class="card bg-warning text-white mb-4">
-                <div class="card-body">Warning Card</div>
+                <div class="card-body">Jumlah Transaksi Hari Ini :<br><?= $countPenjualan ?> Barang terjual</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
                     <a class="small text-white stretched-link" href="#">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -25,7 +25,7 @@ $this->load->view('template/navbar');
         </div>
         <div class="col-xl-3 col-md-6">
             <div class="card bg-success text-white mb-4">
-                <div class="card-body">Success Card</div>
+                <div class="card-body">Keuntungan Hari Ini :<br> Rp. 3.000</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
                     <a class="small text-white stretched-link" href="#">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -34,7 +34,7 @@ $this->load->view('template/navbar');
         </div>
         <div class="col-xl-3 col-md-6">
             <div class="card bg-danger text-white mb-4">
-                <div class="card-body">Danger Card</div>
+                <div class="card-body">Stok Barang Kurang :<br> 10 Barang Hampir Habis </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
                     <a class="small text-white stretched-link" href="#">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
