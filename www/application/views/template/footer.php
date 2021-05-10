@@ -16,8 +16,6 @@
 <script src="<?= base_url() ?>/public/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url() ?>/public/js/scripts.js"></script>
 <script src="<?= base_url() ?>/public/js/Chart.min.js" \></script>
-<script src="<?= base_url() ?>/public/assets/demo/chart-area-demo.js"></script>
-<script src="<?= base_url() ?>/public/assets/demo/chart-bar-demo.js"></script>
 <script src="<?= base_url() ?>/public/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>/public/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>/public/assets/demo/datatables-demo.js"></script>

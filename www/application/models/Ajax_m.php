@@ -45,6 +45,21 @@ class Ajax_m extends CI_Model
         );
         $this->cart->insert($data);
     }
+
+    public function getDataBar($i, $year)
+    {
+        return $this->db->query('SELECT SUM(total) as total,strftime("%m", tanggal) AS month, strftime("%Y", tanggal) AS year FROM penjualan WHERE month = "' . $i . '" AND year ="' . $year . '" GROUP BY month
+        ')->row('total');
+    }
+
+    public function getDataArea($date)
+    {
+        $this->db->select('SUM(total) as total')
+            ->from('penjualan')
+            ->where('tanggal', $date)
+            ->group_by('tanggal');
+        return $this->db->get()->row('total');
+    }
 }
     
     /* End of file Ajax_m.php */

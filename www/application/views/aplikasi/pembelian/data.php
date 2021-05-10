@@ -7,7 +7,7 @@ $this->load->view('template/navbar');
 <div class="container-fluid">
     <div class="d-flex justify-content-between px-3">
         <h4><i class="bi bi-bag-check-fill"></i> Data Transaksi Pembelian</h4>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#addData"> <i class="bi bi-plus"></i>Tambah Data</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addData"><i class="bi bi-plus"></i> Tambah</button>
     </div>
 
     <div class="card mb-4 mt-4">
