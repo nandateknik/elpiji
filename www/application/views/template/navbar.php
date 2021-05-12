@@ -33,7 +33,7 @@
 						<i class="bi bi-cash"></i> Laporan
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<?= site_url('/aplikasi/supplier/') ?>">Supplier</a>
+						<a class="dropdown-item" href="<?= site_url('/laporan/penjualan/') ?>">penjualan</a>
 						<a class="dropdown-item" href="<?= site_url('/aplikasi/barang/') ?>">Barang</a>
 					</div>
 				</li>
