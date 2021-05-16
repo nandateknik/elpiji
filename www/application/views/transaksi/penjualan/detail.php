@@ -61,6 +61,14 @@ $this->load->view('template/navbar');
                         <th class="text-right" colspan="5">TOTAL :</th>
                         <th>Rp. <?= number_format($penjualan->total) ?></th>
                     </tr>
+                    <tr>
+                        <th class="text-right" colspan="5">BAYAR :</th>
+                        <th>Rp. <?= number_format($penjualan->bayar) ?></th>
+                    </tr>
+                    <tr>
+                        <th class="text-right" colspan="5">KEMBALI :</th>
+                        <th>Rp. <?= number_format($penjualan->kembalian) ?></th>
+                    </tr>
                 </tbody>
             </table>
         </div>

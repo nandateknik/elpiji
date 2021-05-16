@@ -33,6 +33,7 @@ class Pembelian_m extends CI_Model
         $this->db->from('barang');
         $this->db->join('pembelian', 'pembelian.kode_brg = barang.kode');
         $this->db->join('user', 'user.id = pembelian.id_user');
+        $this->db->order_by('tanggal', 'desc');
         $query = $this->db->get();
         return $query->result();
     }

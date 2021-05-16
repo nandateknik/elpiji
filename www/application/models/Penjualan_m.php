@@ -24,7 +24,8 @@
                 'id_brg' => $key['id'],
                 'jumlah' => $key['qty'],
                 'harga_jual' => $key['price'],
-                'harga_beli' => $brg->harga_beli
+                'harga_beli' => $brg->harga_beli,
+                'keuntungan' => ($key['price'] - $brg->harga_beli) * $key['qty']
             );
             $stok = $brg->stok - $key['qty'];
             $this->updateStok($key['id'], $stok);

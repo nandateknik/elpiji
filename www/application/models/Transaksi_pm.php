@@ -2,6 +2,7 @@
 {
     public function get()
     {
+        $this->db->order_by('tanggal', 'desc');
         return  $this->db->get('penjualan')->result();
     }
 
@@ -19,7 +20,7 @@
 
     public function getPenjualan($nota)
     {
-        $this->db->select('penjualan.total, user.user, penjualan.tanggal, penjualan.nota')
+        $this->db->select('penjualan.total, user.user, penjualan.tanggal, penjualan.nota,penjualan.bayar, penjualan.kembalian')
             ->from('penjualan')
             ->join('user', 'user.id = penjualan.id_user')
             ->where('nota', $nota);
