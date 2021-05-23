@@ -20,6 +20,31 @@
 <script src="<?= base_url() ?>/public/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>/public/assets/demo/datatables-demo.js"></script>
 
+<script>
+	function logout() {
+		swal({
+				title: "Apakah kamu yakin?",
+				text: "Kamu akan keluar dari aplikasi ini",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+			})
+			.then((willDelete) => {
+				if (willDelete) {
+					swal("Berhasil! kamu akan dikeluarkan dari aplikasi sebentar lagi", {
+						icon: "success",
+						button: false,
+					});
+					setInterval(function() {
+						window.location.replace("<?= site_url('/welcome/logout') ?>");
+					}, 1500);
+				} else {
+					swal("Kamu membatalkan keluar dari aplikasi !");
+				}
+			});
+	}
+</script>
+
 </body>
 
 </html>

@@ -33,7 +33,7 @@
 						<i class="bi bi-cash"></i> Laporan
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="<?= site_url('/laporan/penjualan/') ?>">penjualan</a>
+						<a class="dropdown-item" href="<?= site_url('/laporan/penjualan/') ?>">Penjualan</a>
 						<a class="dropdown-item" href="<?= site_url('/laporan/penjualan/barang') ?>">Barang</a>
 					</div>
 				</li>
@@ -46,10 +46,8 @@
 							<i class="bi bi-person-fill"></i>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="<?= site_url('aplikasi/user/detail') ?>"><i class="bi bi-person-square"></i> Profile</a>
+							<a class="dropdown-item" onclick="logout()" href="javascript:()"><i class="bi bi-power"></i> Logout</a>
 						</div>
 					</li>
 				</ul>
