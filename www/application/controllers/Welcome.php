@@ -33,6 +33,9 @@ class Welcome extends CI_Controller
 
 	public function login()
 	{
+		if ($this->session->userdata('login')) {
+			redirect(site_url('/aplikasi/dashboard'));
+		}
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
@@ -48,5 +51,11 @@ class Welcome extends CI_Controller
 			}
 		}
 		$this->load->view('welcome/login');
+	}
+
+	public function logout()
+	{
+		session_destroy();
+		redirect(site_url());
 	}
 }

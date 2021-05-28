@@ -1,6 +1,18 @@
-<?php
-$this->load->view('template/header');
-?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="<?= base_url() ?>/public/css/styles.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>/public/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= base_url() ?>/public/assets/bootstrap-icon/bootstrap-icons.css">
+    <script src="<?= base_url() ?>/public/js/sweetalert.js"></script>
+</head>
 
 <body class="bg-primary">
     <div id="layoutAuthentication">
@@ -39,20 +51,6 @@ $this->load->view('template/header');
                     </div>
                 </div>
             </main>
-        </div>
-        <div id="layoutAuthentication_footer">
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
         </div>
     </div>
 

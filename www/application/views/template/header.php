@@ -1,3 +1,10 @@
+<?php
+
+if (!$this->session->userdata('login')) {
+	redirect(site_url());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -15,6 +15,19 @@ class Penjualan extends CI_Controller
         $this->load->library('pdf');
     }
 
+    public function pesan($title, $pesan, $icon)
+    {
+        $data = '
+        <script>
+        swal({
+            title: "' . $title . '",
+            text: "' . $pesan . '!",
+            icon: "' . $icon . '",
+            button: "Confirm",
+        });
+        </script>';
+        $this->session->set_userdata('pesan', $data);
+    }
 
     public function index()
     {
@@ -23,6 +36,7 @@ class Penjualan extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data['penjualan'] = $this->laporan_pm->getPenjualan();
+            $this->pesan('Pencarian Data Berhasil !', 'Kamu berhasil melakukan pencarian data penjualan', 'success');
         } else {
             $data = null;
         }
@@ -96,6 +110,7 @@ class Penjualan extends CI_Controller
 
         if ($this->form_validation->run()) {
             $data['barang'] = $this->laporan_pm->getBarangById();
+            $this->pesan('Pencarian Data Berhasil !', 'Kamu berhasil melakukan pencarian data penjualan barang', 'success');
         } else {
             $data = null;
         }
