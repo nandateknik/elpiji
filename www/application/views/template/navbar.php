@@ -25,6 +25,7 @@
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<?= site_url('/aplikasi/supplier/') ?>">Supplier</a>
 						<a class="dropdown-item" href="<?= site_url('/aplikasi/barang/') ?>">Barang</a>
+						<a class="dropdown-item" href="<?= site_url('/aplikasi/user/data') ?>">User</a>
 					</div>
 				</li>
 

@@ -28,6 +28,12 @@ class User extends CI_Controller
         $this->session->set_userdata('pesan', $data);
     }
 
+    public function data()
+    {
+        $data['user'] = $this->user_m->get();
+        $this->load->view('aplikasi/user/data', $data);
+    }
+
     public function detail()
     {
         $data['user'] = $this->user_m->getById();
@@ -62,6 +68,27 @@ class User extends CI_Controller
             $this->pesan('Data bermasalah atau kosong !', 'Coba periksa data yang dikirimkan ', 'warning');
         }
         $this->detail();
+    }
+
+    public function updateDataProfile()
+    {
+        if (!empty($this->input->post())) {
+            $this->user_m->updateDataProfile();
+            $this->pesan('Update Data Berhasil !', 'Kamu berhasil update data profile baru ', 'success');
+        } else {
+            $this->pesan('Update Data Gagal !', 'Kamu gagal update data profile baru ', 'success');
+        }
+
+        redirect(site_url('aplikasi/user/data'));
+    }
+
+    public function resetpw($id)
+    {
+        if (!$this->user_m->resetPassword($id)) {
+            $this->pesan('Update Data Gagal !', 'Kamu gagal update data profile baru ', 'success');
+        }
+
+        redirect(site_url('aplikasi/user/data'));
     }
 }
     
