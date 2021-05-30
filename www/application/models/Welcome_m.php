@@ -10,9 +10,10 @@ class Welcome_m extends CI_Model
         $post = $this->input->post();
         $data = $this->db->get_where('user', array('user' => $post['username']))->row();
 
-        if (empty($data)) {
+        if (empty($data) || $data->is_active != 1) {
             $this->session->set_userdata('login', false);
         } else {
+
             if ($data->password = $post['password']) {
                 $newdata = array(
                     'id'  => $data->id,
