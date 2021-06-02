@@ -11,6 +11,7 @@ class Penjualan extends CI_Controller
     {
         parent::__construct();
         $this->load->model('laporan_pm');
+        $this->load->model('toko_m');
         $this->load->library('form_validation');
         $this->load->library('pdf');
     }
@@ -45,7 +46,7 @@ class Penjualan extends CI_Controller
 
     public function cetak()
     {
-
+        $toko = $this->toko_m->get();
         $data =  $this->laporan_pm->getCetakPenjualan();
         if (empty($data)) {
             redirect(site_url('laporan/penjualan'));
@@ -62,8 +63,8 @@ class Penjualan extends CI_Controller
         $i = 0;
         $html = '
             <div style="text-align:center; margin:0; padding:0;">
-            <h1>LAPORAN PENJUALAN RANGKUM <br> TOKO SINDA BANYUWANGI</h1>
-            <P>Jl. Yos Sudarso no 72, Klatak, Banyuwangi. Telp: 082331201148</P>
+            <h1>LAPORAN PENJUALAN RANGKUM <br> ' . $toko->toko . '</h1>
+            <P>' . $toko->alamat . ' Telp. ' . $toko->telp . '</P>
             </div>
             <table border="1px" cellpadding="3">
                 <tr cellspacing="1" bgcolor="#ffffff">
@@ -119,7 +120,7 @@ class Penjualan extends CI_Controller
 
     public function cetakBarang()
     {
-
+        $toko = $this->toko_m->get();
         $data =  $this->laporan_pm->CetakBarangById();
         if (empty($data)) {
             redirect(site_url('laporan/penjualan'));
@@ -145,8 +146,8 @@ class Penjualan extends CI_Controller
         };
         $i = 0;
         $html = '
-            <h1 style="text-align:center;">LAPORAN PENJUALAN RANGKUM <br> TOKO SINDA BANYUWANGI</h1>
-            <p style="text-align:center; border-bottom:0.5px solid;">Jl. Yos Sudarso no 72, Klatak, Banyuwangi. Telp: 082331201148</p>
+            <h1 style="text-align:center;">LAPORAN PENJUALAN RANGKUM <br> ' . $toko->toko . '</h1>
+            <p style="text-align:center; border-bottom:0.5px solid;">' . $toko->alamat . ' Telp. ' . $toko->telp . '</p>
             <br>
             <P>
             Nama Item : ' . $nama_item . '<br>
