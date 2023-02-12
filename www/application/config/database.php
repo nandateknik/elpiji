@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sqlite:' . APPPATH . 'database.db',
+	'hostname' => 'sqlite:' . APPPATH . 'elpiji.db',
 	'username' => '',
 	'password' => '',
 	'database' => '',

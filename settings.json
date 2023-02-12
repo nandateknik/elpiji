@@ -10,7 +10,7 @@
         "log_file": "debug.log"
     },
     "main_window": {
-        "title": "Aplikasi penjualan (Kasir)",
+        "title": "Aplikasi Elpiji (SPBE)",
         "icon": "",
         "default_size": [800, 600],
         "minimum_size": [640, 480],
