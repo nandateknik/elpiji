@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="#"><img src="https://img.shields.io/badge/BETA-V.0.1-%3CCOLOR%3E.svg"></a>
-<a href="#"><img src="https://img.shields.io/badge/BY-NANDADEV-blue"></a>
+<a href="https://www.instagram.com/nandakrisbianto"><img src="https://img.shields.io/badge/BY-NANDADEV-blue"></a>
 <a href="https://wa.me/6282331201148"><img src="https://img.shields.io/badge/REPORT-BUG-red"></a>
 
 </p>
